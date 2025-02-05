@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'inicio' #es necesario poner las apps que se crean para que no haga problema con las direcciones de los archivos
 ]
 
 MIDDLEWARE = [
@@ -54,8 +55,8 @@ ROOT_URLCONF = 'proyecto_1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'], #poner las direcciones para que reconozca los templates, igual es mas efectivo con el reconocimiento de apps
+        'APP_DIRS': True, #PONE EL NOMBRE DE LA APP CREADA EN INSTALLED_APPS
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
