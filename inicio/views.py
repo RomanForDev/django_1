@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from inicio.models import Chata
+from inicio.forms import crear
 
 
 def inicio(request):
@@ -8,5 +9,6 @@ def inicio(request):
     return render(request, 'inicio.html') #render sirve para cargar templates
 
 def crear_auto(request):
-    return render(request, 'inicio/crear_auto.html')
+    formulario= crear_auto
+    return render(request, 'inicio/crear_auto.html', {'formulario': formulario})
 
